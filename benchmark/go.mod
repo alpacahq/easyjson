@@ -1,6 +1,6 @@
 module github.com/mailru/easyjson/benchmark
 
-go 1.12
+go 1.26.10
 
 require (
 	github.com/json-iterator/go v1.1.7
