@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"math"
 	"net"
+	"strconv"
 	"time"
 
 	"github.com/mailru/easyjson"
@@ -113,11 +114,11 @@ var primitiveTypesString = "{" +
 	`"Uint32String":"` + fmt.Sprint(uint32(math.MaxUint32)) + `",` +
 	`"Uint64String":"` + fmt.Sprint(uint64(math.MaxUint64)) + `",` +
 
-	`"Float32":` + fmt.Sprint(1.5) + `,` +
-	`"Float64":` + fmt.Sprint(math.MaxFloat64) + `,` +
+	`"Float32":` + strconv.FormatFloat(1.5, 'f', -1, 32) + `,` +
+	`"Float64":` + strconv.FormatFloat(math.MaxFloat64, 'f', -1, 64) + `,` +
 
-	`"Float32String":"` + fmt.Sprint(1.5) + `",` +
-	`"Float64String":"` + fmt.Sprint(math.MaxFloat64) + `",` +
+	`"Float32String":"` + strconv.FormatFloat(1.5, 'f', -1, 32) + `",` +
+	`"Float64String":"` + strconv.FormatFloat(math.MaxFloat64, 'f', -1, 64) + `",` +
 
 	`"Ptr":"bla",` +
 	`"PtrNil":null` +
@@ -207,8 +208,8 @@ var namedPrimitiveTypesString = "{" +
 	`"Uint32":` + fmt.Sprint(uint32(math.MaxUint32)) + `,` +
 	`"Uint64":` + fmt.Sprint(uint64(math.MaxUint64)) + `,` +
 
-	`"Float32":` + fmt.Sprint(1.5) + `,` +
-	`"Float64":` + fmt.Sprint(math.MaxFloat64) + `,` +
+	`"Float32":` + strconv.FormatFloat(1.5, 'f', -1, 32) + `,` +
+	`"Float64":` + strconv.FormatFloat(math.MaxFloat64, 'f', -1, 64) + `,` +
 
 	`"Ptr":"bla",` +
 	`"PtrNil":null` +

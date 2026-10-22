@@ -50,7 +50,7 @@ jobs:
           install: |
             apt-get update
             apt install -y curl wget make gcc
-            latestGo=$(curl "https://golang.org/VERSION?m=text")
+            latestGo=go1.26.10
             wget --quiet "https://dl.google.com/go/${latestGo}.linux-${{ matrix.arch }}.tar.gz"
             rm -f $(which go)
             rm -rf /usr/local/go
